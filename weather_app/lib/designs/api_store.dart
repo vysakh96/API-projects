@@ -10,6 +10,7 @@ class Store {
   double wind;
   double visibility;
   double pressure;
+  String conditionIcon;
   Store(
       {this.time = '2023-02-01 12.30',
       this.conditions = 'Clear',
@@ -21,7 +22,8 @@ class Store {
       this.humidity = 76,
       this.wind = 20.2,
       this.visibility = 10.0,
-      this.pressure = 1026.0});
+      this.pressure = 1026.0,
+      this.conditionIcon='https://i.pinimg.com/736x/60/00/5d/60005d24cfad1d4877718504d5e444ab.jpg'});
 
   factory Store.fromJson(Map<String, dynamic> json) {
     return Store(
@@ -36,6 +38,7 @@ class Store {
       wind: json["current"]["wind_kph"],
       visibility: json["current"]["vis_km"],
       pressure: json["current"]["pressure_mb"],
+      conditionIcon: json[ "current"]["condition"][ "icon"],
     );
   }
 }

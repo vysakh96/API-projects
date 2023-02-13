@@ -96,29 +96,37 @@ class _HomeState extends State<Home> {
                       style: TextStyle(fontSize: 28, color: Colors.white70),
                     ),
                   )),
-              Align(
-                alignment: Alignment.center,
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: Stack(
-                    children: [
-                      Icon(
-                        Icons.sunny,
-                        color: Colors.yellow,
-                        size: 65,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 30),
-                        child: Icon(
-                          Icons.cloud,
-                          color: Colors.white.withOpacity(.9),
-                          size: 55,
-                        ),
-                      ),
-                    ],
-                  ),
+              Container(
+                height: 80,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: NetworkImage("https:${storeWeather.conditionIcon.toString()}"),
+                    )
                 ),
               ),
+              // Align(
+              //   alignment: Alignment.center,
+              //   child: Padding(
+              //     padding: const EdgeInsets.only(top: 10),
+              //     child: Stack(
+              //       children: [
+              //         Icon(
+              //           Icons.sunny,
+              //           color: Colors.yellow,
+              //           size: 65,
+              //         ),
+              //         Padding(
+              //           padding: const EdgeInsets.only(left: 30),
+              //           child: Icon(
+              //             Icons.cloud,
+              //             color: Colors.white.withOpacity(.9),
+              //             size: 55,
+              //           ),
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              // ),
               Align(
                   alignment: Alignment.center,
                   child: Padding(
